@@ -5,13 +5,13 @@ def call(String workspace){
     if(isUnix())
 	{
 		sh "npm init"
-		sh "npm i"
+		sh "npm i -D mocha chai"
 		sh "npm test"
 	}
 	else
 	{
 		bat "npm init"
-		bat "npm i"
+		bat "npm i -D mocha chai"
 		bat "npm test"
 	}
 }
