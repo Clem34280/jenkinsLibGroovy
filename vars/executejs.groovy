@@ -3,5 +3,12 @@ import java.nio.file.Paths
 def call(String scriptFilename, String workspace){
     String scriptPath = [workspace, 'test', scriptFilename].join('/')
 
-    bat "mocha ${scriptPath}  ${workspace}"
+    if(isUnix())
+	{
+		sh "npm test"
+	}
+	else
+	{
+		bat "npm test"
+	}
 }
