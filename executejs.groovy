@@ -1,7 +1,7 @@
 import java.nio.Paths
 
 def call(String scriptFilename, String workspace, String optionalArgs){
-    String scriptPath = [workspace, 'PipelineSteps', scriptFilename].join('/')
+    String scriptPath = [workspace, 'Test', scriptFilename].join('/')
 
     if(isUnix())
 	{
