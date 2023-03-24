@@ -1,4 +1,4 @@
-import java.nio.Paths
+import java.nio.file.Paths
 
 def call(String scriptFilename, String workspace, String optionalArgs){
     String scriptPath = [workspace, 'test', scriptFilename].join('/')
